@@ -27,6 +27,10 @@ const routineSchema = {
 
 const Routine = mongoose.model('Routine', routineSchema)
 
+app.get('/', function(req, res){
+    res.send('Hello World!')
+})
+
 app.get('/routines', function (req, res) {
     Routine.find(function(err, foundRoutines){
        res.send(foundRoutines); 
