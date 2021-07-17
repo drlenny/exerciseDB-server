@@ -39,7 +39,7 @@ app.get('/routines', function (req, res) {
 
 // app.use('/api', routineRouter)
 
-let port = 3005
+let port = process.env.PORT || 3005
 
 app.listen(port, function () {
     console.log("Server started on port succesfully");
